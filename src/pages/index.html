@@ -4,69 +4,79 @@ description: SMEC Group brings together SMEC Automation, SMEClabs, SMEC Technolo
 page: home
 scripts: jobs.js, careers.js
 ---
-<!-- ============ HERO ============ -->
-<section class="bg-gradient-to-b from-brand-50/70 to-white" aria-labelledby="hero-t">
-  <div class="container-site grid items-center gap-10 py-12 lg:grid-cols-12 lg:gap-16 lg:py-20">
-    <div class="lg:col-span-6">
-      <p class="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white px-3 py-1 text-xs font-medium text-brand" data-reveal><i data-lucide="badge-check" class="h-4 w-4"></i>SMEC Group · Since 2001</p>
-      <h1 id="hero-t" class="heading-xl mt-6 text-balance" data-reveal>Skilling people. Building software. <span class="text-brand">Automating industry.</span></h1>
-      <p class="lede mt-6 max-w-xl text-pretty" data-reveal>For 25 years, SMEC has trained engineers and technologists, built software for growing businesses, and delivered automation for marine and energy operations — from Kerala to the Gulf and beyond.</p>
-      <div class="mt-10 flex flex-wrap gap-3" data-reveal>
-        <a href="services.html" class="btn-primary sm:min-w-[14rem]">Explore our solutions <i data-lucide="arrow-right"></i></a>
-        <a href="services.html#courses" class="btn-outline sm:min-w-[12rem]">Find a course <i data-lucide="graduation-cap"></i></a>
+<!-- ============ HERO CAROUSEL ============ -->
+<section class="hero-carousel on-dark relative isolate h-[calc(100svh-64px)] min-h-[540px] overflow-hidden bg-[#0B1530] text-white lg:h-[calc(100svh-116px)] lg:max-h-[820px] lg:min-h-[600px]" data-carousel aria-roledescription="carousel" aria-label="SMEC Group highlights" style="--slide-dur: 7s">
+  <div class="absolute inset-0" aria-live="off" data-carousel-track>
+
+    <article class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+      <img class="hero-slide-img" src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=2000&q=80" alt="" width="2000" height="1333" fetchpriority="high">
+      <div class="hero-slide-body container-site">
+        <p class="hero-kicker">SMEC Group · Since 2001</p>
+        <h1 id="hero-t" class="hero-title">Engineering the skills, software and systems industry runs on</h1>
+        <a href="services.html" class="hero-link">Explore our solutions <i data-lucide="arrow-right"></i></a>
       </div>
-      <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-ink-600" data-reveal>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand"></i>NSDC training partner</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand"></i>ISO 9001:2015</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand"></i>100% placement assistance</li>
-      </ul>
-    </div>
-    <div class="relative lg:col-span-6">
-      <div class="media aspect-[4/3] shadow-[0_24px_48px_-24px_rgba(30,58,138,.35)]">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="SMEC engineers and developers collaborating around laptops" width="1200" height="900" fetchpriority="high">
+    </article>
+
+    <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4" aria-hidden="true">
+      <img class="hero-slide-img" src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=2000&q=80" alt="" width="2000" height="1333" loading="lazy">
+      <div class="hero-slide-body container-site">
+        <p class="hero-kicker">Marine &amp; industrial automation</p>
+        <h2 class="hero-title">Automation for the operations that cannot stop</h2>
+        <a href="services.html#automation" class="hero-link" tabindex="-1">See automation services <i data-lucide="arrow-right"></i></a>
       </div>
-      <div class="absolute -bottom-6 left-4 flex items-center gap-4 rounded-xl border border-paper-200 bg-white p-4 shadow-[0_12px_32px_-12px_rgba(0,0,0,.25)] sm:left-6">
-        <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand text-white"><i data-lucide="users" class="h-5 w-5"></i></span>
-        <span><span class="block text-xl font-semibold leading-tight text-ink">1 lakh+</span><span class="text-xs text-ink-600">careers launched since 2001</span></span>
+    </article>
+
+    <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4" aria-hidden="true">
+      <img class="hero-slide-img" src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2000&q=80" alt="" width="2000" height="1333" loading="lazy">
+      <div class="hero-slide-body container-site">
+        <p class="hero-kicker">Oil &amp; gas · Abu Dhabi</p>
+        <h2 class="hero-title">Digital systems for energy operations across the GCC</h2>
+        <a href="services.html#oil-gas" class="hero-link" tabindex="-1">Discover energy solutions <i data-lucide="arrow-right"></i></a>
       </div>
+    </article>
+
+    <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4" aria-hidden="true">
+      <img class="hero-slide-img" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=80" alt="" width="2000" height="1333" loading="lazy">
+      <div class="hero-slide-body container-site">
+        <p class="hero-kicker">Training &amp; placement</p>
+        <h2 class="hero-title">Building the engineers and technologists of the Gen AI era</h2>
+        <a href="services.html#courses" class="hero-link" tabindex="-1">Find a course <i data-lucide="arrow-right"></i></a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Site coordinates -->
+  <p class="pointer-events-none absolute right-4 top-6 z-20 hidden font-mono text-[0.7rem] tracking-[0.12em] text-white/55 sm:block lg:right-12" aria-hidden="true">10.01° N · 76.36° E — KOCHI HQ</p>
+
+  <!-- Chapter tabs with progress -->
+  <div class="absolute inset-x-0 bottom-0 z-20">
+    <div class="container-site grid grid-cols-4 gap-3 pb-6 sm:gap-6 lg:pb-9" role="group" aria-label="Choose a slide">
+      <button type="button" class="hero-tab" data-carousel-dot="0" aria-current="true"><span class="hero-track"><span class="hero-progress"></span></span><span class="mt-3 flex items-baseline gap-3"><span class="font-mono text-xs text-white/60">01</span><span class="hidden text-sm sm:inline">SMEC Group</span></span></button>
+      <button type="button" class="hero-tab" data-carousel-dot="1"><span class="hero-track"><span class="hero-progress"></span></span><span class="mt-3 flex items-baseline gap-3"><span class="font-mono text-xs text-white/60">02</span><span class="hidden text-sm sm:inline">Automation</span></span></button>
+      <button type="button" class="hero-tab" data-carousel-dot="2"><span class="hero-track"><span class="hero-progress"></span></span><span class="mt-3 flex items-baseline gap-3"><span class="font-mono text-xs text-white/60">03</span><span class="hidden text-sm sm:inline">Oil &amp; Gas</span></span></button>
+      <button type="button" class="hero-tab" data-carousel-dot="3"><span class="hero-track"><span class="hero-progress"></span></span><span class="mt-3 flex items-baseline gap-3"><span class="font-mono text-xs text-white/60">04</span><span class="hidden text-sm sm:inline">Training</span></span></button>
     </div>
   </div>
 </section>
 
-<!-- ============ KEY FIGURES ============ -->
-<section class="pb-12 pt-10 lg:pb-16 lg:pt-14" aria-label="SMEC in numbers">
-  <div class="container-site">
-    <dl class="grid grid-cols-2 gap-px border border-paper-200 bg-paper-200 lg:grid-cols-4">
-      <div class="flex flex-col bg-white p-5 sm:p-8">
-        <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand"><i data-lucide="calendar-days" class="h-5 w-5"></i></span>
-        <dt class="order-3 mt-2 text-sm text-ink-600">Years of excellence</dt>
-        <dd class="order-2 mt-6 text-4xl font-light text-brand lg:text-5xl"><span data-count="25">25</span>+</dd>
-      </div>
-      <div class="flex flex-col bg-white p-5 sm:p-8">
-        <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand"><i data-lucide="graduation-cap" class="h-5 w-5"></i></span>
-        <dt class="order-3 mt-2 text-sm text-ink-600">Placements since 2001</dt>
-        <dd class="order-2 mt-6 text-4xl font-light text-brand lg:text-5xl">1 lakh+</dd>
-      </div>
-      <div class="flex flex-col bg-white p-5 sm:p-8">
-        <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand"><i data-lucide="building-2" class="h-5 w-5"></i></span>
-        <dt class="order-3 mt-2 text-sm text-ink-600">Hiring companies</dt>
-        <dd class="order-2 mt-6 text-4xl font-light text-brand lg:text-5xl"><span data-count="150">150</span>+</dd>
-      </div>
-      <div class="flex flex-col bg-white p-5 sm:p-8">
-        <span class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-50 text-brand"><i data-lucide="star" class="h-5 w-5"></i></span>
-        <dt class="order-3 mt-2 text-sm text-ink-600">Learner rating · 2,000+ reviews</dt>
-        <dd class="order-2 mt-6 text-4xl font-light text-brand lg:text-5xl">4.9<span class="text-2xl text-ink-500">/5</span></dd>
-      </div>
-    </dl>
-  </div>
+<!-- ============ DIVISIONS ============ -->
+<section aria-label="SMEC divisions">
+  <nav class="border-y border-paper-200" aria-label="SMEC divisions">
+    <ul class="container-site grid grid-cols-2 lg:grid-cols-4">
+      <li class="border-r border-paper-200"><a href="services.html#automation" class="division-tab group"><span class="text-xs text-ink-400">01</span><span class="mt-2 block font-medium text-ink">Automation</span><span class="mt-1 hidden text-sm text-ink-500 sm:block">Marine &amp; industrial</span><i data-lucide="arrow-up-right" class="division-arrow"></i></a></li>
+      <li class="lg:border-r lg:border-paper-200"><a href="services.html#oil-gas" class="division-tab group"><span class="text-xs text-ink-400">02</span><span class="mt-2 block font-medium text-ink">Oil &amp; Gas</span><span class="mt-1 hidden text-sm text-ink-500 sm:block">Energy systems, GCC</span><i data-lucide="arrow-up-right" class="division-arrow"></i></a></li>
+      <li class="border-r border-t border-paper-200 lg:border-t-0"><a href="services.html#software" class="division-tab group"><span class="text-xs text-ink-400">03</span><span class="mt-2 block font-medium text-ink">Software</span><span class="mt-1 hidden text-sm text-ink-500 sm:block">Web, mobile, ERP &amp; AI</span><i data-lucide="arrow-up-right" class="division-arrow"></i></a></li>
+      <li class="border-t border-paper-200 lg:border-t-0"><a href="services.html#it-training" class="division-tab group"><span class="text-xs text-ink-400">04</span><span class="mt-2 block font-medium text-ink">Training</span><span class="mt-1 hidden text-sm text-ink-500 sm:block">IT, technical &amp; management</span><i data-lucide="arrow-up-right" class="division-arrow"></i></a></li>
+    </ul>
+  </nav>
 </section>
 
 <!-- ============ ALUMNI ============ -->
-<section class="pb-16 lg:pb-20" aria-labelledby="alumni-t">
+<section class="border-b border-paper-200 py-8 lg:py-10" aria-labelledby="alumni-t">
   <div class="container-site">
-    <div class="rounded-xl bg-paper-50 px-5 py-8 sm:px-8 lg:flex lg:items-center lg:gap-12">
+    <div class="lg:flex lg:items-center lg:gap-12">
       <h2 id="alumni-t" class="shrink-0 text-sm text-ink-600 lg:w-40">Our learners work at</h2>
-      <ul class="mt-6 grid flex-1 grid-cols-2 gap-x-6 gap-y-5 text-center text-lg font-semibold tracking-tight text-ink-500 sm:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:text-xl">
+      <ul class="mt-6 grid flex-1 grid-cols-2 gap-x-6 gap-y-5 text-center text-lg font-semibold tracking-tight text-ink-400 sm:grid-cols-3 lg:mt-0 lg:grid-cols-6 lg:text-xl">
         <li>Bank of America</li><li>HSBC</li><li>TATA</li><li>Wipro</li><li>J.P. Morgan</li><li>IBM</li>
       </ul>
     </div>
@@ -110,7 +120,7 @@ scripts: jobs.js, careers.js
         </div>
       </a>
       <a href="https://smecoilandgas.com/" rel="noopener" class="tile group !p-0" data-reveal>
-        <div class="media aspect-[16/10]"><img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=75" alt="Stainless-steel process piping at an energy plant" loading="lazy" width="800" height="500"></div>
+        <div class="media aspect-[16/10]"><img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=75" alt="Refinery towers at an oil and gas plant" loading="lazy" width="800" height="500"></div>
         <div class="flex flex-1 flex-col p-4 sm:p-6">
           <p class="text-xs tracking-[0.32px] text-ink-600">Energy · Abu Dhabi</p>
           <h3 class="mt-2 text-xl">SMEC Oil &amp; Gas</h3>
@@ -258,7 +268,7 @@ scripts: jobs.js, careers.js
         <p class="flex items-start gap-3"><i data-lucide="flame" class="icon text-brand-400"></i>Oil &amp; gas systems</p>
         <p class="flex items-start gap-3"><i data-lucide="building-2" class="icon text-brand-400"></i>MEP consultancy</p>
       </div>
-      <a href="services.html#automation" class="btn-light mt-10 sm:min-w-[15rem]">Automation solutions <i data-lucide="arrow-right"></i></a>
+      <a href="services.html#automation" class="btn-primary mt-10 sm:min-w-[15rem]">Automation solutions <i data-lucide="arrow-right"></i></a>
     </div>
     <div class="media aspect-[4/3] lg:col-span-6 lg:col-start-7">
       <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1400&q=75" alt="Engineer operating industrial machinery" loading="lazy" width="1400" height="1050">
@@ -302,12 +312,12 @@ scripts: jobs.js, careers.js
 </section>
 
 <!-- ============ FINAL CTA ============ -->
-<section class="bg-brand text-white on-dark" aria-labelledby="cta-t">
+<section class="border-t border-paper-200 bg-paper-50" aria-labelledby="cta-t">
   <div class="container-site grid gap-8 py-14 lg:grid-cols-12 lg:items-end lg:py-20">
     <h2 id="cta-t" class="heading-lg text-balance lg:col-span-8">Start a course, a project or a partnership. We’ll take it from there.</h2>
     <div class="flex flex-col items-start gap-4 lg:col-span-4 lg:items-end">
-      <a href="contact.html" class="btn-light sm:min-w-[15rem]">Talk to SMEC <i data-lucide="arrow-right"></i></a>
-      <p class="text-sm text-brand-100">Mon–Sat, 9 am – 7 pm · +91 97781 91215</p>
+      <a href="contact.html" class="btn-primary sm:min-w-[15rem]">Talk to SMEC <i data-lucide="arrow-right"></i></a>
+      <p class="text-sm text-ink-600">Mon–Sat, 9 am – 7 pm · +91 97781 91215</p>
     </div>
   </div>
 </section>

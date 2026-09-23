@@ -90,7 +90,7 @@
       if (term) active.push(['q', `“${q.value.trim()}”`]);
       Object.entries(selects).forEach(([k, s]) => { if (s.value) active.push([k, s.value]); });
       chipsWrap.innerHTML = active.map(([k, v]) =>
-        `<button type="button" class="tag gap-1.5 !bg-ink !py-1 !pl-3 !pr-2 !text-white transition-colors hover:!bg-ink-700" data-remove="${k}" aria-label="Remove filter ${esc(v)}">${esc(v)}<i data-lucide="x" class="h-3.5 w-3.5"></i></button>`
+        `<button type="button" class="tag gap-1.5 !bg-brand !py-1 !pl-3 !pr-2 !text-white transition-colors hover:!bg-brand-600" data-remove="${k}" aria-label="Remove filter ${esc(v)}">${esc(v)}<i data-lucide="x" class="h-3.5 w-3.5"></i></button>`
       ).join('');
       chipsWrap.hidden = active.length === 0;
       clearBtns.forEach((b) => { if (b.closest('#job-filters')) b.hidden = active.length === 0; });

@@ -55,7 +55,7 @@ scripts: jobs.js, careers.js
       </article>
 
       <aside class="lg:col-span-4 lg:col-start-9">
-        <div class="lg:sticky lg:top-20">
+        <div class="lg:sticky lg:top-28">
           <div class="border border-paper-200">
             <div class="border-b border-paper-200 p-6">
               <h2 class="text-xl">What we offer</h2>
@@ -80,18 +80,18 @@ scripts: jobs.js, careers.js
   </section>
 
   <!-- APPLICATION FORM -->
-  <section id="apply" class="section scroll-mt-12 border-t border-paper-200 bg-paper-50" aria-labelledby="apply-t">
+  <section id="apply" class="section scroll-mt-24 border-t border-paper-200 bg-paper-50" aria-labelledby="apply-t">
     <div class="container-site grid gap-12 lg:grid-cols-12">
       <div class="lg:col-span-4">
-        <div class="lg:sticky lg:top-20">
+        <div class="lg:sticky lg:top-28">
           <p class="eyebrow">Apply</p>
           <h2 id="apply-t" class="heading-md mt-3 text-balance">Apply for <span id="apply-role">this role</span></h2>
           <p class="mt-5 text-ink-600">It takes about five minutes. Fields marked * are required. Our HR team reviews every application personally and will contact shortlisted candidates.</p>
           <ol class="mt-8 border-t border-paper-300 text-sm">
-            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand text-xs text-brand">1</span>Your details</li>
-            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand text-xs text-brand">2</span>Experience</li>
-            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand text-xs text-brand">3</span>CV &amp; cover note</li>
-            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand text-xs text-brand">4</span>Consent &amp; submit</li>
+            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center  border border-brand text-xs text-brand">1</span>Your details</li>
+            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center  border border-brand text-xs text-brand">2</span>Experience</li>
+            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center  border border-brand text-xs text-brand">3</span>CV &amp; cover note</li>
+            <li class="flex items-center gap-4 border-b border-paper-300 py-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center  border border-brand text-xs text-brand">4</span>Consent &amp; submit</li>
           </ol>
         </div>
       </div>
@@ -102,7 +102,7 @@ scripts: jobs.js, careers.js
           <p data-form-summary class="!mt-0 mb-8 border-l-4 border-danger bg-[#FFF1F1] px-4 py-3 text-sm text-ink" role="alert" hidden></p>
 
           <fieldset class="!mt-0 min-w-0 space-y-6">
-            <legend class="mb-6 flex items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-normal text-white">1</span>Your details</legend>
+            <legend class="mb-6 flex items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center  bg-brand text-sm font-normal text-white">1</span>Your details</legend>
             <div class="grid gap-6 sm:grid-cols-2">
               <div data-field><label for="a-first" class="field-label">First name *</label><input id="a-first" name="firstName" class="field" required autocomplete="given-name"></div>
               <div data-field><label for="a-last" class="field-label">Last name *</label><input id="a-last" name="lastName" class="field" required autocomplete="family-name"></div>
@@ -114,7 +114,7 @@ scripts: jobs.js, careers.js
           </fieldset>
 
           <fieldset class="min-w-0 space-y-6 border-t border-paper-200 pt-10">
-            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-normal text-white">2</span>Experience</legend>
+            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center  bg-brand text-sm font-normal text-white">2</span>Experience</legend>
             <div class="clear-both grid gap-6 sm:grid-cols-2">
               <div data-field><label for="a-role" class="field-label">Current / most recent title</label><input id="a-role" name="currentTitle" class="field" autocomplete="organization-title"></div>
               <div data-field><label for="a-company" class="field-label">Current / most recent employer</label><input id="a-company" name="currentCompany" class="field" autocomplete="organization"></div>
@@ -134,7 +134,7 @@ scripts: jobs.js, careers.js
           </fieldset>
 
           <fieldset class="min-w-0 space-y-6 border-t border-paper-200 pt-10">
-            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-normal text-white">3</span>CV &amp; cover note</legend>
+            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center  bg-brand text-sm font-normal text-white">3</span>CV &amp; cover note</legend>
             <div data-field class="clear-both">
               <span class="field-label" id="a-cv-label">Résumé / CV *</span>
               <label class="dropzone flex cursor-pointer flex-col items-center justify-center gap-2 border border-dashed border-ink-400 bg-white px-6 py-10 text-center transition-colors hover:bg-paper-50 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-brand">
@@ -154,7 +154,7 @@ scripts: jobs.js, careers.js
           </fieldset>
 
           <fieldset class="min-w-0 space-y-5 border-t border-paper-200 pt-10">
-            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-normal text-white">4</span>Consent</legend>
+            <legend class="float-left mb-6 flex w-full items-center gap-3 text-2xl font-light"><span class="flex h-8 w-8 items-center justify-center  bg-brand text-sm font-normal text-white">4</span>Consent</legend>
             <div data-field class="clear-both flex flex-wrap items-start gap-3">
               <input id="a-consent" name="consent" type="checkbox" required class="mt-0.5 h-4 w-4 shrink-0 accent-ink" data-msg="Please agree so we can process your application.">
               <label for="a-consent" class="flex-1 text-sm text-ink-600">I agree to SMEC Group processing my personal data to assess my application, as described in the <a href="#" class="text-brand hover:underline">candidate privacy notice</a>. *</label>

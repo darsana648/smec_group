@@ -31,7 +31,7 @@
       mega.dataset.open = String(open);
       megaBtn.setAttribute('aria-expanded', String(open));
       megaBtn.querySelector('svg').style.transform = open ? 'rotate(180deg)' : '';
-      if (open) header.classList.add('is-scrolled'); else onScroll();
+      header.classList.toggle('mega-open', open);
     };
     // Ignore the click that immediately follows a hover-open (mouse users)
     megaBtn.addEventListener('click', () => { if (Date.now() - hoverOpenedAt < 400) return; setMega(mega.dataset.open !== 'true'); });
@@ -78,6 +78,41 @@
     });
     matchMedia('(min-width: 1024px)').addEventListener('change', (m) => { if (m.matches && mobile.dataset.open === 'true') setMobile(false); });
   }
+
+  /* ---------- Hero carousel (cross-fade; the active tab's progress line drives autoplay) ---------- */
+  $$('[data-carousel]').forEach((root) => {
+    const slides = $$('.hero-slide', root);
+    const tabs = $$('[data-carousel-dot]', root);
+    if (slides.length < 2) return;
+    const DUR = (parseFloat(getComputedStyle(root).getPropertyValue('--slide-dur')) || 7) * 1000;
+    let i = 0; let timer = null; let remaining = DUR; let startedAt = 0; let paused = false;
+    const run = () => { if (paused) return; clearTimeout(timer); startedAt = Date.now(); timer = setTimeout(() => go(i + 1), remaining); };
+    const go = (n) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => {
+        const on = k === i;
+        s.classList.toggle('is-active', on);
+        s.setAttribute('aria-hidden', String(!on));
+        $$('a, button', s).forEach((el) => { el.tabIndex = on ? 0 : -1; });
+      });
+      tabs.forEach((t, k) => t.setAttribute('aria-current', String(k === i)));
+      remaining = DUR; run();
+    };
+    const pause = (on) => {
+      if (on === paused) return;
+      paused = on; root.classList.toggle('is-paused', on);
+      if (on) { clearTimeout(timer); remaining = Math.max(0, remaining - (Date.now() - startedAt)); } else run();
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => go(Number(t.dataset.carouselDot))));
+    root.addEventListener('focusin', (e) => { if (e.target.matches(':focus-visible')) pause(true); }); root.addEventListener('focusout', () => pause(false));
+    root.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') go(i + 1); if (e.key === 'ArrowLeft') go(i - 1); });
+    let x0 = null;
+    root.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1); x0 = null; });
+    document.addEventListener('visibilitychange', () => pause(document.hidden));
+    go(0);
+
+  });
 
   /* ---------- Scroll reveal ---------- */
   const revealEls = $$('[data-reveal]');
