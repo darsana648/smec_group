@@ -3,20 +3,20 @@ module.exports = {
   content: ['./*.html', './assets/js/**/*.js'],
   theme: {
     extend: {
-      // Clean corporate palette: neutral grays + one primary (#1E3A8A).
+      // Clean corporate palette: neutral grays + one primary (#09202E).
       // Token names are kept from the previous theme so JS-rendered markup still maps.
       colors: {
         brand: {
-          DEFAULT: '#1E3A8A', // SMEC primary navy-blue (10:1 on white)
-          950: '#0B1233',
-          900: '#111B45',
-          800: '#14204F',
-          700: '#172554', // pressed
-          600: '#1A3278', // hover
-          400: '#93B4F5', // blue on dark backgrounds
-          200: '#BFD2FA',
-          100: '#DBE6FD',
-          50: '#EEF3FE',
+          DEFAULT: '#09202E', // SMEC primary: deep petrol navy (16:1 on white)
+          950: '#030D13',
+          900: '#051620',
+          800: '#071B27',
+          700: '#041219', // pressed
+          600: '#143A50', // hover (lighter)
+          400: '#8FB7CC', // accent on dark backgrounds
+          200: '#BCD5E2',
+          100: '#DAE8EF',
+          50: '#EDF4F7',
         },
         ink: {
           DEFAULT: '#161616',
@@ -36,10 +36,10 @@ module.exports = {
           300: '#C6C6C6',
         },
         accent: {
-          DEFAULT: '#1E3A8A',
-          500: '#1E3A8A',
-          300: '#93B4F5',
-          50: '#EEF3FE',
+          DEFAULT: '#09202E',
+          500: '#09202E',
+          300: '#8FB7CC',
+          50: '#EDF4F7',
         },
         danger: '#DA1E28',
         success: '#24A148',

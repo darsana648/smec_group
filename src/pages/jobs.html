@@ -1,0 +1,91 @@
+---
+title: Open roles — SMEC Group Careers
+description: Search every open role across SMEC Automation, SMEClabs, SMEC Technologies and SMEC Oil & Gas — filter by company, team, location and employment type.
+page: careers
+scripts: jobs.js, careers.js
+---
+<!-- ============ PAGE HEADER ============ -->
+<section class="border-b border-paper-200 bg-paper-50" aria-labelledby="jobs-t">
+  <div class="container-site py-12 lg:py-16">
+    <nav aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-ink-600">
+        <li><a href="careers.html" class="link">Careers</a></li>
+        <li aria-hidden="true">/</li>
+        <li aria-current="page">Open roles</li>
+      </ol>
+    </nav>
+    <div class="mt-6 grid gap-6 lg:grid-cols-12 lg:items-end">
+      <div class="lg:col-span-7">
+        <h1 id="jobs-t" class="heading-xl text-balance">Find your role.</h1>
+        <p class="lede mt-6 max-w-2xl">Search <span data-jobs-count>12</span> open roles across all four SMEC companies, or narrow by team, location and employment type.</p>
+      </div>
+      <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink-600 lg:col-span-5 lg:justify-end">
+        <span class="inline-flex items-center gap-2"><i data-lucide="building-2" class="h-4 w-4"></i>4 companies</span>
+        <span class="inline-flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4"></i>Kerala · Dubai · Abu Dhabi</span>
+        <a href="careers.html" class="link">Life at SMEC <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPEN ROLES ============ -->
+<section id="open-roles" class="section scroll-mt-32" aria-label="Job search and results">
+  <div class="container-site">
+    <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+      <aside class="lg:col-span-3">
+        <div class="lg:sticky lg:top-32">
+          <h3 class="text-sm text-ink-600">By company</h3>
+          <ul id="dept-quick" class="mt-3 border-t border-paper-200"></ul>
+        </div>
+      </aside>
+
+      <div class="lg:col-span-9">
+        <form id="job-filters" class="grid grid-cols-2 gap-x-4 gap-y-5 bg-paper-50 p-4 sm:p-6 lg:grid-cols-3" role="search" aria-label="Filter jobs">
+          <div class="col-span-2 lg:col-span-3">
+            <label for="job-search" class="field-label">Search</label>
+            <div class="relative">
+              <span class="pointer-events-none absolute left-4 top-1/2 flex -translate-y-1/2 text-ink-600" aria-hidden="true"><i data-lucide="search" class="h-4 w-4"></i></span>
+              <input id="job-search" type="search" class="field !min-h-[48px] !bg-white !pl-11" placeholder="e.g. Python, trainer, Dubai, automation" autocomplete="off">
+            </div>
+          </div>
+          <div><label for="f-company" class="field-label">Company</label><select id="f-company" class="field !bg-white"><option value="">All companies</option></select></div>
+          <div><label for="f-dept" class="field-label">Team</label><select id="f-dept" class="field !bg-white"><option value="">All teams</option></select></div>
+          <div><label for="f-location" class="field-label">Location</label><select id="f-location" class="field !bg-white"><option value="">All locations</option></select></div>
+          <div><label for="f-type" class="field-label">Employment type</label><select id="f-type" class="field !bg-white"><option value="">Any</option></select></div>
+          <div><label for="f-sort" class="field-label">Sort by</label><select id="f-sort" class="field !bg-white"><option value="new">Newest first</option><option value="az">Title A–Z</option></select></div>
+          <div class="col-span-2 flex items-end sm:col-span-1"><button type="button" class="btn-ghost w-full !min-h-[40px]" data-clear-filters hidden>Clear all filters <i data-lucide="x"></i></button></div>
+        </form>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-8">
+          <p id="job-count" class="text-lg" aria-live="polite" role="status"></p>
+          <div id="job-active" class="flex flex-wrap gap-2" hidden></div>
+        </div>
+
+        <ul id="job-list" class="mt-4 border-t border-paper-200"></ul>
+
+        <div id="job-empty" class="mt-6 bg-paper-50 px-6 py-14 text-center sm:px-8" hidden>
+          <i data-lucide="search" class="icon-lg mx-auto"></i>
+          <p class="mt-6 text-2xl font-light">No roles match — yet.</p>
+          <p class="mx-auto mt-3 max-w-md text-ink-600">Try a broader search, or join our talent community and we’ll contact you when something fits.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <button type="button" class="btn-outline sm:min-w-[11rem]" data-clear-filters>Clear filters <i data-lucide="x"></i></button>
+            <a href="careers.html#talent-community" class="btn-primary sm:min-w-[13rem]">Join talent community <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TALENT COMMUNITY CTA ============ -->
+<section class="border-t border-paper-200 bg-paper-50" aria-labelledby="tc-cta">
+  <div class="container-site grid gap-8 py-14 lg:grid-cols-12 lg:items-end lg:py-20">
+    <div class="lg:col-span-8">
+      <h2 id="tc-cta" class="heading-lg text-balance">Don’t see the right role?</h2>
+      <p class="lede mt-4 max-w-2xl">Join our talent community and we’ll contact you when something that fits your skills opens up.</p>
+    </div>
+    <div class="flex flex-wrap gap-3 lg:col-span-4 lg:justify-end">
+      <a href="careers.html#talent-community" class="btn-primary sm:min-w-[15rem]">Join talent community <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>

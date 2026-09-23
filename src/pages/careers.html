@@ -12,17 +12,17 @@ scripts: jobs.js, careers.js
       <h1 id="careers-t" class="heading-xl mt-4 text-balance" data-reveal>Build a career where skills become industry.</h1>
       <p class="lede mt-6 max-w-xl text-pretty" data-reveal>Teach the next generation of engineers, build software for real clients, or deliver automation across the Gulf. Four companies, one group, and plenty of room to grow.</p>
 
-      <form id="hero-search" class="mt-10 flex max-w-xl flex-col gap-2 sm:flex-row" role="search" data-reveal>
+      <form id="hero-search" action="jobs.html" method="get" class="mt-10 flex max-w-xl flex-col gap-2 sm:flex-row" role="search" data-reveal>
         <label for="hero-q" class="sr-only">Search jobs by title, skill, company or location</label>
         <div class="relative flex-1">
           <span class="pointer-events-none absolute left-4 top-1/2 flex -translate-y-1/2 text-ink-600" aria-hidden="true"><i data-lucide="search" class="h-4 w-4"></i></span>
-          <input id="hero-q" type="search" placeholder="Job title, skill, company or city" class="field !min-h-[48px] !pl-11">
+          <input id="hero-q" name="q" type="search" placeholder="Job title, skill, company or city" class="field !min-h-[48px] !pl-11">
         </div>
         <button type="submit" class="btn-primary sm:min-w-[11rem]">Search roles <i data-lucide="arrow-right"></i></button>
       </form>
       <p class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-ink-600" data-reveal>
         <span><span data-jobs-count>12</span> open roles</span>
-        <a href="#open-roles" class="link">Browse all <i data-lucide="arrow-right"></i></a>
+        <a href="jobs.html" class="link">Browse all <i data-lucide="arrow-right"></i></a>
         <a href="#talent-community" class="link">Join our talent community <i data-lucide="arrow-right"></i></a>
       </p>
     </div>
@@ -47,9 +47,9 @@ scripts: jobs.js, careers.js
   <ul class="container-site flex overflow-x-auto text-sm">
     <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-ink-600 transition-colors hover:bg-paper-50 hover:text-ink aria-[current=true]:border-brand aria-[current=true]:text-ink" href="#why">Why SMEC</a></li>
     <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-ink-600 transition-colors hover:bg-paper-50 hover:text-ink aria-[current=true]:border-brand aria-[current=true]:text-ink" href="#life">Life at SMEC</a></li>
+    <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-brand transition-colors hover:bg-paper-50 aria-[current=true]:border-brand" href="#open-roles">Open roles (<span data-jobs-count>12</span>)</a></li>
     <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-ink-600 transition-colors hover:bg-paper-50 hover:text-ink aria-[current=true]:border-brand aria-[current=true]:text-ink" href="#benefits">Benefits</a></li>
     <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-ink-600 transition-colors hover:bg-paper-50 hover:text-ink aria-[current=true]:border-brand aria-[current=true]:text-ink" href="#process">How we hire</a></li>
-    <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-brand transition-colors hover:bg-paper-50 aria-[current=true]:border-brand" href="#open-roles">Open roles (<span data-jobs-count>12</span>)</a></li>
     <li><a class="flex h-12 items-center whitespace-nowrap border-b-2 border-transparent px-4 text-ink-600 transition-colors hover:bg-paper-50 hover:text-ink aria-[current=true]:border-brand aria-[current=true]:text-ink" href="#talent-community">Talent community</a></li>
   </ul>
 </nav>
@@ -89,7 +89,7 @@ scripts: jobs.js, careers.js
   </div>
 </section>
 
-<!-- ============ LIFE AT SMEC ============ -->
+<!-- ============ LIFE AT SMEC (full mosaic + link to life-at-smec.html) ============ -->
 <section id="life" class="section scroll-mt-32 border-t border-paper-200 bg-paper-50" aria-labelledby="life-t">
   <div class="container-site">
     <div class="grid gap-6 lg:grid-cols-12">
@@ -152,11 +152,48 @@ scripts: jobs.js, careers.js
         </div>
       </article>
     </div>
+
+    <div class="mt-10 flex flex-col gap-4 border-t border-paper-300 pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-ink-600">Workshops, live projects, hiring days and teams across Kerala and the Gulf.</p>
+      <a href="life-at-smec.html" class="btn-primary sm:min-w-[15rem]">Explore life at SMEC <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPEN ROLES (teaser → jobs.html) ============ -->
+<section id="open-roles" class="section scroll-mt-32" aria-labelledby="roles-t">
+  <div class="container-site grid gap-12 lg:grid-cols-12 lg:gap-16">
+    <div class="lg:col-span-5">
+      <p class="eyebrow">Open roles</p>
+      <h2 id="roles-t" class="heading-lg mt-3 text-balance">Find your role.</h2>
+      <p class="lede mt-6">There are <span data-jobs-count>12</span> open roles across all four SMEC companies — in training, software, engineering and placements.</p>
+
+      <form action="jobs.html" method="get" class="mt-10 flex flex-col gap-2 sm:flex-row" role="search" aria-label="Search open roles">
+        <label for="roles-q" class="sr-only">Search jobs by title, skill, company or location</label>
+        <div class="relative flex-1">
+          <span class="pointer-events-none absolute left-4 top-1/2 flex -translate-y-1/2 text-ink-600" aria-hidden="true"><i data-lucide="search" class="h-4 w-4"></i></span>
+          <input id="roles-q" name="q" type="search" placeholder="Job title, skill or city" class="field !min-h-[48px] !pl-11">
+        </div>
+        <button type="submit" class="btn-primary sm:min-w-[9rem]">Search <i data-lucide="arrow-right"></i></button>
+      </form>
+      <a href="jobs.html" class="btn-outline mt-4 w-full sm:w-auto sm:min-w-[15rem]">View all <span data-jobs-count>12</span> open roles <i data-lucide="arrow-right"></i></a>
+
+      <h3 class="mt-12 text-sm text-ink-600">Browse by company</h3>
+      <ul id="company-links" class="mt-3 border-t border-paper-200"></ul>
+    </div>
+
+    <div class="lg:col-span-7">
+      <div class="flex items-baseline justify-between gap-4 border-b border-ink pb-3">
+        <h3 class="text-lg">Latest openings</h3>
+        <a href="jobs.html" class="link text-sm">See all <i data-lucide="arrow-right"></i></a>
+      </div>
+      <ul id="latest-jobs"></ul>
+    </div>
   </div>
 </section>
 
 <!-- ============ BENEFITS ============ -->
-<section id="benefits" class="section scroll-mt-32" aria-labelledby="ben-t">
+<section id="benefits" class="section scroll-mt-32 border-t border-paper-200 bg-paper-50" aria-labelledby="ben-t">
   <div class="container-site">
     <div class="grid gap-6 lg:grid-cols-12">
       <div class="lg:col-span-5">
@@ -179,7 +216,7 @@ scripts: jobs.js, careers.js
 </section>
 
 <!-- ============ HIRING PROCESS ============ -->
-<section id="process" class="section scroll-mt-32 border-t border-paper-200 bg-paper-50" aria-labelledby="proc-t">
+<section id="process" class="section scroll-mt-32 border-t border-paper-200" aria-labelledby="proc-t">
   <div class="container-site">
     <div class="grid gap-6 lg:grid-cols-12">
       <div class="lg:col-span-5">
@@ -210,63 +247,6 @@ scripts: jobs.js, careers.js
         <p class="mt-2 text-sm text-ink-600">Meet leadership, then receive a clear written offer.</p>
       </li>
     </ol>
-  </div>
-</section>
-
-<!-- ============ OPEN ROLES ============ -->
-<section id="open-roles" class="section scroll-mt-32" aria-labelledby="roles-t">
-  <div class="container-site">
-    <div class="grid gap-6 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="eyebrow">Open roles</p>
-        <h2 id="roles-t" class="heading-lg mt-3 text-balance">Find your role.</h2>
-      </div>
-      <p class="lede lg:col-span-6 lg:col-start-7 lg:self-end">Search across all four SMEC companies, or narrow by team, location and employment type.</p>
-    </div>
-
-    <div class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-8">
-      <aside class="lg:col-span-3">
-        <div class="lg:sticky lg:top-32">
-          <h3 class="text-sm text-ink-600">By company</h3>
-          <ul id="dept-quick" class="mt-3 border-t border-paper-200"></ul>
-        </div>
-      </aside>
-
-      <div class="lg:col-span-9">
-        <form id="job-filters" class="grid grid-cols-2 gap-x-4 gap-y-5 bg-paper-50 p-4 sm:p-6 lg:grid-cols-3" role="search" aria-label="Filter jobs">
-          <div class="col-span-2 lg:col-span-3">
-            <label for="job-search" class="field-label">Search</label>
-            <div class="relative">
-              <span class="pointer-events-none absolute left-4 top-1/2 flex -translate-y-1/2 text-ink-600" aria-hidden="true"><i data-lucide="search" class="h-4 w-4"></i></span>
-              <input id="job-search" type="search" class="field !min-h-[48px] !bg-white !pl-11" placeholder="e.g. Python, trainer, Dubai, automation" autocomplete="off">
-            </div>
-          </div>
-          <div><label for="f-company" class="field-label">Company</label><select id="f-company" class="field !bg-white"><option value="">All companies</option></select></div>
-          <div><label for="f-dept" class="field-label">Team</label><select id="f-dept" class="field !bg-white"><option value="">All teams</option></select></div>
-          <div><label for="f-location" class="field-label">Location</label><select id="f-location" class="field !bg-white"><option value="">All locations</option></select></div>
-          <div><label for="f-type" class="field-label">Employment type</label><select id="f-type" class="field !bg-white"><option value="">Any</option></select></div>
-          <div><label for="f-sort" class="field-label">Sort by</label><select id="f-sort" class="field !bg-white"><option value="new">Newest first</option><option value="az">Title A–Z</option></select></div>
-          <div class="col-span-2 flex items-end sm:col-span-1"><button type="button" class="btn-ghost w-full !min-h-[40px]" data-clear-filters hidden>Clear all filters <i data-lucide="x"></i></button></div>
-        </form>
-
-        <div class="flex flex-wrap items-center justify-between gap-4 pt-8">
-          <p id="job-count" class="text-lg" aria-live="polite" role="status"></p>
-          <div id="job-active" class="flex flex-wrap gap-2" hidden></div>
-        </div>
-
-        <ul id="job-list" class="mt-4 border-t border-paper-200"></ul>
-
-        <div id="job-empty" class="mt-6 bg-paper-50 px-6 py-14 text-center sm:px-8" hidden>
-          <i data-lucide="search" class="icon-lg mx-auto"></i>
-          <p class="mt-6 text-2xl font-light">No roles match — yet.</p>
-          <p class="mx-auto mt-3 max-w-md text-ink-600">Try a broader search, or join our talent community and we’ll contact you when something fits.</p>
-          <div class="mt-8 flex flex-wrap justify-center gap-3">
-            <button type="button" class="btn-outline sm:min-w-[11rem]" data-clear-filters>Clear filters <i data-lucide="x"></i></button>
-            <a href="#talent-community" class="btn-primary sm:min-w-[13rem]">Join talent community <i data-lucide="arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

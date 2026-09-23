@@ -130,6 +130,30 @@
   }
 
   /* =========================================================
+     Careers page teaser: latest openings + browse by company
+  ========================================================= */
+  const latest = $('#latest-jobs');
+  if (latest) {
+    latest.innerHTML = [...JOBS].sort((a, b) => b.posted.localeCompare(a.posted)).slice(0, 5).map((j) => `
+      <li class="border-b border-paper-200">
+        <a href="job.html?id=${encodeURIComponent(j.id)}" class="job-row group flex items-center justify-between gap-6 px-2 py-5">
+          <span>
+            <span class="block text-sm text-ink-600">${esc(j.company)} · ${esc(j.department)}</span>
+            <span class="job-title mt-1 block text-xl transition-colors">${esc(j.title)}</span>
+            <span class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-ink-600"><span class="inline-flex items-center gap-1.5"><i data-lucide="map-pin" class="h-4 w-4"></i>${esc(j.location)}</span><span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="h-4 w-4"></i>${daysAgo(j.posted)}</span></span>
+          </span>
+          <span class="text-brand">${arrow}</span>
+        </a>
+      </li>`).join('');
+  }
+  const coLinks = $('#company-links');
+  if (coLinks) {
+    coLinks.innerHTML = unique('company').map((co) =>
+      `<li><a href="jobs.html?company=${encodeURIComponent(co)}" class="group flex min-h-[48px] items-center justify-between gap-4 border-b border-paper-200 px-2 py-3 text-sm transition-colors hover:bg-paper-50 hover:text-brand"><span>${esc(co)}</span><span class="tag">${JOBS.filter((x) => x.company === co).length}</span></a></li>`
+    ).join('');
+  }
+
+  /* =========================================================
      Job detail (job.html)
   ========================================================= */
   const root = $('#job-root');

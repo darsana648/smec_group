@@ -2,7 +2,7 @@
 
 Static multi-page site: **HTML5, Tailwind CSS v3 (compiled), vanilla JavaScript**. Open `index.html` to view it; no server is needed.
 
-Design: clean corporate style modelled on IBM.com (Carbon). **IBM Plex Sans** throughout, light-weight headlines, white and light-gray (`#F4F4F4`) surfaces, near-black text (`#161616`) and one primary colour, navy blue `#1E3A8A`. Images sit inside the page grid with rounded corners (12px); cards, buttons and fields use small radii. Icons are [Lucide](https://lucide.dev) (loaded from jsDelivr, rendered by `main.js` from `<i data-lucide="name">`).
+Design: clean corporate style modelled on IBM.com (Carbon). **IBM Plex Sans** throughout, light-weight headlines, white and light-gray (`#F4F4F4`) surfaces, near-black text (`#161616`) and one primary colour, navy blue `#09202E`. Images sit inside the page grid with rounded corners (12px); cards, buttons and fields use small radii. Icons are [Lucide](https://lucide.dev) (loaded from jsDelivr, rendered by `main.js` from `<i data-lucide="name">`).
 
 Photos are free-licence Unsplash images loaded from `images.unsplash.com`. Replace them with SMEC's own photography before launch (see checklist).
 
