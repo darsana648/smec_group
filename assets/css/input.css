@@ -45,13 +45,9 @@
 
   /* Buttons — rectangular, 48px, label left + icon right */
   .btn { @apply inline-flex min-h-[48px]  items-center justify-between gap-10 px-4 py-3 text-left text-sm font-normal leading-[1.29] tracking-[0.16px] transition-colors duration-100; }
-  .btn-primary, .btn-brand { @apply btn bg-brand text-white hover:bg-brand-600 active:bg-brand-800; }
-  .btn-secondary { @apply btn border border-brand bg-white text-brand hover:bg-brand-50; }
-  .on-dark .btn-primary { box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); }
-  .btn-light { @apply btn bg-white text-ink hover:bg-paper-100; }
-  .btn-outline { @apply btn border border-brand text-brand hover:bg-brand hover:text-white; }
-  .on-dark .btn-outline { @apply border-white text-white hover:bg-white hover:text-ink; }
-  .btn-ghost { @apply btn text-brand hover:bg-paper-100; }
+  /* Every button variant uses the primary colour #09202E (solid, white text) */
+  .btn-primary, .btn-brand, .btn-secondary, .btn-light, .btn-outline, .btn-ghost { @apply btn border border-brand bg-brand text-white hover:border-brand-600 hover:bg-brand-600 active:bg-brand-800; }
+  .on-dark :is(.btn-primary, .btn-brand, .btn-secondary, .btn-light, .btn-outline, .btn-ghost) { border-color: rgba(255,255,255,.28); }
   .btn svg { @apply h-4 w-4 shrink-0; }
   .btn:disabled { @apply cursor-not-allowed bg-paper-300 text-ink-400; }
 
