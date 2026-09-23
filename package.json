@@ -1,0 +1,16 @@
+{
+  "name": "smec-group-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SMEC Group corporate website — static HTML, Tailwind CSS, vanilla JS",
+  "scripts": {
+    "build:html": "node build.mjs",
+    "build:css": "tailwindcss -i assets/css/input.css -o assets/css/tailwind.css --minify",
+    "build": "npm run build:html && npm run build:css",
+    "watch": "tailwindcss -i assets/css/input.css -o assets/css/tailwind.css --watch",
+    "serve": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
